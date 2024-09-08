@@ -86,11 +86,11 @@ def main():
     connect_d1_path = os.path.join(args.base_dir, 'connect_8_d1')
     connect_d3_path = os.path.join(args.base_dir, 'connect_8_d3')
 
-    start = time.clock()
+    start = time.time()
     ##  connectivity cube
     batch_process(gt_path, connect_d1_path, connect_d3_path)
 
-    end = time.clock()
+    end = time.time()
     print('Finished Creating connectivity cube, time {0}s'.format(end - start))
 
 if __name__ == "__main__":
