@@ -124,7 +124,7 @@ def main():
 
     args = parser.parse_args()
 
-    start = time.clock()
+    start = time.time()
     # Create crops for training
     CreatCrops(args.base_dir,
                 args.dataset,
@@ -143,7 +143,7 @@ def main():
                 image_suffix=args.im_suffix,
                 gt_suffix=args.gt_suffix)
 
-    end = time.clock()
+    end = time.time()
     print('Finished Creating crops, time {0}s'.format(end - start))
 
 if __name__ == "__main__":
